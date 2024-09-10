@@ -1,7 +1,33 @@
-# MCA3D
-- Professor: M. Sc. Will Machado
+# MCA3D - Curso de Modelagem Computacional e Animação 3D (Computational Modeling and 3D Animation Course)
+**Instructor:** M.Sc. Will Machado
 
-## ÍNDICE DE AULAS
+---
 
-- Aula 14/08/2024
-- - Introdução ao OpenGL e Aplicações 2D
+## Lesson Index
+
+### Lesson 1: August 14, 2024
+**Topic:** Introduction to OpenGL and 2D Applications
+
+---
+
+## Course Description
+The MCA3D course offers a comprehensive introduction to computational modeling and 3D animation, focusing on OpenGL. Throughout the lessons, fundamental concepts of 2D and 3D graphics will be covered, as well as development techniques for interactive applications.
+
+---
+
+## Objectives
+- Introduce fundamental OpenGL concepts
+- Develop interactive 2D and 3D applications
+- Apply computational modeling and animation techniques
+
+---
+
+## Prerequisites
+- Basic programming knowledge (C, C++, or similar)
+- Understanding of linear algebra and geometry
+
+---
+
+## Additional Resources
+- [Official OpenGL Documentation](https://www.opengl.org/documentation/)
+- [OpenGL Tutorials - learnopengl.com](https://learnopengl.com/)
