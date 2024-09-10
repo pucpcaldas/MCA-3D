@@ -1,4 +1,4 @@
-# MCA3D - Curso de Modelagem Computacional e Animação 3D (Computational Modeling and 3D Animation Course)
+# MCA3D - Modelagem e Construção de Aplicações 3D (Modeling and Building 3D Applications)
 **Instructor:** M.Sc. Will Machado
 
 ---
