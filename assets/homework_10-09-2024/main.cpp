@@ -65,7 +65,7 @@ int main(int argc, char** argv) {
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
     glutInitWindowSize(500, 500);
-    glutCreateWindow("Desenhando DAVI com Linhas");
+    glutCreateWindow("Name Render");
 
     init();
     glutDisplayFunc(render);
