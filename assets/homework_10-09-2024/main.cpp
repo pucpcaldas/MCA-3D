@@ -44,7 +44,8 @@ void drawI() {
 
 void render() {
     glClear(GL_COLOR_BUFFER_BIT);
-    glColor3f(1.0f, 1.0f, 1.0f);
+    glColor3f(0.0f, 1.0f, 0.0f); //define a cor das linhas
+    glLineWidth(5);
 
     drawD();
     drawA();
@@ -56,9 +57,11 @@ void render() {
 
 void init() {
     glClearColor(0.0, 0.0, 0.0, 1.0);
-    glMatrixMode(GL_PROJECTION);
-    glLoadIdentity();
-    gluOrtho2D(-1.0, 1.0, -1.0, 1.0);
+    glMatrixMode(GL_PROJECTION); //seta definicao da matriz de transformacao da camera
+    glLoadIdentity(); //atribui a matriz de transformacao da camera a matriz identidade
+    gluOrtho2D(-1.0, 1.0, -1.0, 1.0); //define a area de enquadramento de cenas no sistema de coordenadas
+    glMatrixMode(GL_MODELVIEW); //seta definicao da matriz de trnaformacao de modelos da cena
+    glLoadIdentity(); //atribui a matriz de trasnformacao 
 }
 
 int main(int argc, char** argv) {
