@@ -30,4 +30,3 @@ altera as propriedades de largura, altura e profundidade, reajustando as coorden
 glRotate(deg, x, y, z)
 ```
 rotaciona o elemento de acordo com os seguintes argumentos: angulo, eixo x, eixo y, eixo z. Para os três últimos algumentos, define 1.0f para SIM e o.0f para NÃO
-
