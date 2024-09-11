@@ -5,8 +5,11 @@
 
 ## Lesson Index
 
-### Lesson 1: August 14, 2024
+### Lesson August 14, 2024
 **Topic:** Introduction to OpenGL and 2D Applications
+
+### Lesson September 11, 2024
+**Topic:** Transfomraation in order
 
 ---
 
