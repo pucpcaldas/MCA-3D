@@ -5,4 +5,6 @@
 - escalamento
 - rotação
 - espelhamento
-- cis
+- cisalhamento
+
+>> talvez (TALVEZ) os modelos graficos que vemos são retas de funções
