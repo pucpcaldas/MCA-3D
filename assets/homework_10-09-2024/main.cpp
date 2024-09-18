@@ -1,6 +1,8 @@
 #include <GL/freeglut.h>
 
-void drawD() {
+GLfloat escala = 1;
+
+ void drawD() {
     glBegin(GL_LINE_STRIP);
         glVertex2f(-0.9f, 0.3f);
         glVertex2f(-0.9f, -0.3f);
@@ -42,37 +44,43 @@ void drawI() {
     glEnd();
 }
 
-void render() {
+void desenha(void) {
     glClear(GL_COLOR_BUFFER_BIT);
-    glColor3f(0.0f, 1.0f, 0.0f); //define a cor das linhas
-    glLineWidth(5);
 
-    drawD();
-    drawA();
-    drawV();
-    drawI();
-
-    glutSwapBuffers();
-}
-
-void init() {
-    glClearColor(0.0, 0.0, 0.0, 1.0);
     glMatrixMode(GL_PROJECTION); //seta definicao da matriz de transformacao da camera
     glLoadIdentity(); //atribui a matriz de transformacao da camera a matriz identidade
     gluOrtho2D(-1.0, 1.0, -1.0, 1.0); //define a area de enquadramento de cenas no sistema de coordenadas
     glMatrixMode(GL_MODELVIEW); //seta definicao da matriz de trnaformacao de modelos da cena
-    glLoadIdentity(); //atribui a matriz de trasnformacao 
+    glLoadIdentity(); //atribui a matriz de trasnformacao
+    glColor3f(0.0f, 1.0f, 0.0f); //define a cor das linhas
+    glScalef(escala, escala, 0);
+    glLineWidth(5);
+    drawD();
+    drawA();
+    drawV();
+    drawI();
+    glutSwapBuffers();
+    glFlush();
+}
+
+void listeningKey(unsigned char tecla, GLint x, GLint y) {
+    switch(tecla) {
+        case '+': escala++;
+                break;
+        case '-': if(escala != 1.0f)escala--;
+                break;
+    }
+    desenha();
 }
 
 int main(int argc, char** argv) {
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
     glutInitWindowSize(500, 500);
+    glutInitWindowPosition(300, 100);
     glutCreateWindow("Name Render");
-
-    init();
-    glutDisplayFunc(render);
+    glutKeyboardFunc(listeningKey);
+    glutDisplayFunc(desenha);
     glutMainLoop();
-
     return 0;
 }
